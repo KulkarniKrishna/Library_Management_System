@@ -1,0 +1,89 @@
+[{
+	"bookId": 1001,
+	"bookTitle": "Angular JS",
+	"topic": "AngularJS",
+	"author": "Green",
+	"cost": 375,
+	"imgUrl": "imgs/ajs1.jpg",
+	"issued": true
+}, {
+	"bookId": 1002,
+	"bookTitle": "Instant Angular JS Starter",
+	"topic": "AngularJS",
+	"author": "Dan Menard",
+	"cost": 150,
+	"imgUrl": "imgs/ajs2.jpg",
+	"issued": true
+}, {
+	"bookId": 1003,
+	"bookTitle": "C Programming for Problem Solving",
+	"topic": "C",
+	"author": "DR.M.A.Jayaram",
+	"cost": 4657,
+	"imgUrl": "imgs/c.png",
+	"issued": false
+}, {
+	"bookId": 1004,
+	"bookTitle": "Programming with Java",
+	"topic": "java",
+	"author": "E Balagurusamy",
+	"cost": 650,
+	"imgUrl": "imgs/java.png",
+	"issued": false
+}, {
+	"bookId": 1005,
+	"bookTitle": "Web Technologies",
+	"topic": "HTML,CSS,JS,JSP,JDBC,XML,ASP.NET",
+	"author": "Kogent Learning Solutions",
+	"cost": 390,
+	"imgUrl": "imgs/wt.png",
+	"issued": false
+}, {
+	"bookId": 1007,
+	"bookTitle": "Hands-On ML with SciKit-Learn & TensorFlow",
+	"topic": "ML,AI",
+	"author": "Aurelien Geron",
+	"cost": 2500,
+	"imgUrl": "imgs/ml.png",
+	"issued": false
+}, {
+	"bookId": 1008,
+	"bookTitle": "Mastering Ember.js",
+	"topic": "EmberJS",
+	"author": "Mitchel Kelonye",
+	"cost": 3500,
+	"imgUrl": "imgs/ejs1.JPG",
+	"issued": false
+}, {
+	"bookId": 1009,
+	"bookTitle": "Developing an EmberJS Edge",
+	"topic": "EmberJS",
+	"author": "Jamie White and Matthew Beale",
+	"cost": 2000,
+	"imgUrl": "imgs/ejs2.JPG",
+	"issued": false
+}, {
+	"bookId": 1010,
+	"bookTitle": "Node.js in Action",
+	"topic": "NodeJS",
+	"author": "Mike Cantelon and Marc Harter",
+	"cost": 800,
+	"imgUrl": "imgs/njs1.JPG",
+	"issued": false
+}, {
+	"bookId": 1011,
+	"bookTitle": "Node.js in the Right Way",
+	"topic": "NodeJS",
+	"author": "Jim R. Wilson",
+	"cost": 1200,
+	"imgUrl": "imgs/njs2.JPG",
+	"issued": false
+}, {
+	"bookId": 1012,
+	"bookTitle": "Pro Node.js for Developers",
+	"topic": "NodeJS",
+	"author": "Colin Ihrig",
+	"cost": 2800,
+	"imgUrl": "imgs/njs3.JPG",
+	"issued": false
+}]

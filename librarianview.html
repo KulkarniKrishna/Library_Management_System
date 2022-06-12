@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>View Books Librarian</title>
+  </head>
+  <body>
+      
+    <div class="container mt-3" ng-controller="BookListCtrl_Librarian"  align="center">
+      <div class="page-header">
+        <h1>Librarian View</h1>      
+      </div>
+        <div>
+          <a class="btn btn-primary mt-3 mb-3" href="" ng-click="add()" role="button">Add Book</a>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Search books: </span>
+            </div>
+            <input type="text"  ng-model="bookSrch" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Sort books</label>
+          </div>
+          <select ng-model="bookSort" class="custom-select" id="inputGroupSelect01">
+            <option value="">No Sort</option>
+            <option value="cost">Cost</option>
+            <option value="topic">Topic</option>
+          </select>
+        </div>
+        
+        <div class="row LoginFormDiv" >
+          <div class="card mt-5 ml-5 mr-4 border-primary" style="width: 18rem;" ng-repeat="i in books | filter:bookSrch | orderBy:bookSort">
+            <img class="card-img-top"  ng-src="{{i.imgUrl}}" alt="">
+            <div class="card-body">
+              <h5 class="card-title">{{i.bookTitle}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID     : {{i.bookId}}</li>
+              <li class="list-group-item">Topic  : {{i.topic}}</li>
+              <li class="list-group-item">Author : {{i.author}}</li>
+              <li class="list-group-item">Cost   : {{i.cost | currency:'Rs.'}}</li>
+            </ul>
+            <div class="card-body">
+              <input class="btn btn-outline-secondary" type="button" value="Issue Book" ng-disabled="i.issued" ng-click="issue(i.bookId)"></input>
+              <input class="btn btn-outline-secondary" type="button" value="Return Book" ng-disabled="i.issued != true" ng-click="return(i.bookId)"></input>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

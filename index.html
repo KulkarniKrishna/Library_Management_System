@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app="MainModule">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Library Management</title>
+        <script src="js/angular.js"></script>
+        <script src="js/mycontrollers.js"></script>
+        <script src="js/getandfilterbooks.js"></script>
+        <script src="js/mydirectives.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <script type="text/ng-template" id="loginTemplate">
+            <div class="LoginFormDiv" ng-controller="LoginCtrl">
+                <form>
+                    <div class="form-group pb-4">
+                      <input type="text" class="form-control" id="exampleInputEmail1" ng-model="name" aria-describedby="loginHelp" placeholder="Username">
+                      <small id="loginHelp" class="form-text text-muted">You can login as Student or Librarian</small>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="exampleInputPassword1" ng-model="pass" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3" ng-click="validate()">Login</button>
+                </form>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="studentTemplate">
+            <div ng-include="'studentview.html'"></div>
+        </script>
+
+        <script type="text/ng-template" id="librarianTemplate">
+            <div ng-include="'librarianview.html'"></div>
+        </script>
+
+        <script type="text/ng-template" id="issueBookTemplate">
+            <div ng-include="'issuebook.html'"></div>
+        </script>
+
+        <script type="text/ng-template" id="returnBookTemplate">
+            <div ng-include="'returnbook.html'"></div>
+        </script>
+
+        <script type="text/ng-template" id="addBookTemplate">
+            <div ng-include="'addbook.html'"></div>
+        </script>
+        <div class="container-fluid">
+            <div class="row  pb-2">
+                <nav class="navbar navbar-dark bg-dark">
+                    <span class="navbar-brand mb-0 h1">Library Management System</span>
+                </nav>
+            </div>
+            <div class="container">
+                <div class="row ">
+                    <div ng-view></div>
+                </div>
+            </div>
+            
+        </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

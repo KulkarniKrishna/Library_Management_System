@@ -1,0 +1,9 @@
+[{
+	"username": "student",
+	"password": "student",
+	"role": "student"
+},{
+	"username": "librarian",
+	"password": "librarian",
+	"role": "librarian"
+}]
